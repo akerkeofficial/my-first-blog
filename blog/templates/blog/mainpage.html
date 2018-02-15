@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="{% static 'css/mainpage_style.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+<body>
+
+    <div class="image">​
+    	<div class="left">
+            <img src="{% static 'css/image/logo.png' %}" 
+                 style="width: 15%; height: 100%; position:absolute; top: 7px; left:85px;"/>
+
+            <a style=" top:33px;right:220px; color:#495e7b;">sign in</a>
+            <a style=" top:33px;right:205px; color:#495e7b;">|</a>
+            <a style=" top:33px;right:130px; color:#495e7b;">sing up</a>
+
+        </div>
+            <p style=" top:500px;left:92px; font-size: 25px;color:#ffffff;">Welcome to SDUDE</p><br>
+    </div>
+
+    <div class="right">
+        <p style=" top:25px;left:92px; font-size: 25px;color:#ffffff; position: relative;">What is SDUDE?</p>
+
+        <p style=" top:50px; left:60px; bottom:20px; color:#ffffff; position: relative;">SDUDE is p service that allows students to share different educational resources such as Syllabuses, past Quizzes/Finals etc, leave Feedbacks for courses/professors, ask question about SDU, get new offers about Internship.</p>
+
+        <p style=" top:75px;left:60px;  bottom:20px; color:#ffffff; position: relative;">You have to sign up by your SDU mail and have to be student to access all privileges. But don't worry, it is ANONYMOUS</p>
+    </div>
+
+    <div class="block">
+        <div id="circle">
+            <img src="{% static 'css/image/pdf-2.png' %}" style="width: 70%; height: 70%; position:relative; top:9px; left: 9px;"/>
+        </div>
+
+        <div style="background-color: #F3F2F2;  box-shadow: 2px 2px 2px 2px #000000; width: 15%; height: 60%; position: all; top:50px; left: 100px;">
+        <br><p style=" font-size: 1.5vw;color:#495e7b; text-align: center; position: relative;">Syllabuses and past exams</p>
+        <p style=" font-size: 1vw;color:#495e7b; text-align: center; position: relative;">_______</p>
+        <p style="font-size: 1vw;color:#495e7b; text-align: center; position: relative;">Share and download syllabuses, past quizzes, midterms and finals.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
