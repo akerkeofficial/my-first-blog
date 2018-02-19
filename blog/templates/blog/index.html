@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
 
   </head>
 
@@ -45,15 +46,48 @@
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Sign Up</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Registration</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#some">Sign In</a>
+              <a class="nav-link js-scroll-trigger" href="#some" id="login-button">Sign In</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+
+<div id="login-form">
+  <h1>Log In</h1>
+  <span class="close-btn">
+    <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+  </span>
+
+  <form>
+    <input type="email" name="email" placeholder="E-mail">
+    <input type="password" name="pass" placeholder="Password">
+    <a href="#">sign in</a>
+    <div id="remember-container">
+      <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+      <span id="remember">Remember me</span>
+      <span id="forgotten">Forgotten password</span>
+    </div>
+</form>
+</div>
+
+<!-- Forgotten Password Container -->
+<div id="forgotten-container">
+   <h1>Forgotten</h1>
+  <span class="close-btn">
+    <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+  </span>
+
+  <form>
+    <input type="email" name="email" placeholder="E-mail">
+    <a href="#" class="orange-btn">Get new password</a>
+</form>
+
+</div>
 
     <!-- Header -->
     <header class="masthead">
@@ -79,6 +113,7 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
+            <img src="{%static 'img/logos/exam.png'%}">
             <h4 class="service-heading">Syllabuses and past exams</h4>
             <p class="text-muted">Share and download syllabuses, past quizzes, midterms and finals.</p>
           </div>
@@ -87,6 +122,7 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
+            <img src="{%static 'img/logos/question1.png'%}">
             <h4 class="service-heading">Questions and Feedbacks</h4>
             <p class="text-muted">You can ask any questions about university,courses,food,dormitory,teachers and so on. Also leave feeadback on subject and questions.</p>
           </div>
@@ -95,6 +131,7 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
             </span>
+            <img src="{%static 'img/logos/work.png'%}">
             <h4 class="service-heading">Internship</h4>
             <p class="text-muted">Do you search for internship? Here you can find actual intership, get news about new intership.</p>
           </div>
@@ -189,11 +226,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-          </div>
-        </div>
+        
       </div>
     </section>
 
@@ -204,8 +237,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Registration</h2>
+            <h3 class="section-subheading text-muted">You have to sign up by your SDU mail and have to be student to access all privileges. But don't worry, it is anonymous.</h3>
           </div>
         </div>
         <div class="row">
@@ -214,28 +247,31 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                    <input class="form-control" id="name" type="text" placeholder="Your SDU mail *" required data-validation-required-message="Please enter SDU mail">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                    <input class="form-control" id="email" type="email" placeholder="Your Password *" required data-validation-required-message="Please enter your password">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                    <input class="form-control" id="phone" type="tel" placeholder="Confirm Password *" required data-validation-required-message="Please enter your confirm password">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
+                    <div class="right">
+                      <p style="text-align: center; color: #495e7b; bottom: 20px; top:0px; position: relative; font-weight: bold; font-size: 22px; border:1px solid #495e7b; padding-top: 10px; padding-bottom: 10px; ">Please Note</p>
+                      <p style="text-align: center; color: #495e7b; font-size: 18px;position: relative; top:10px; padding-bottom: 80px; padding-left:10px; padding-right:10px;">You have to sign up with your SDU mail, otherwise your accout will be deleted without notification. This is done to restrict access only to SDU student.</p>
+                      <p class="help-block text-danger"></p>
+                    </div>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Register</button>
                 </div>
               </div>
             </form>
@@ -296,7 +332,28 @@
 
     <!-- Custom scripts for this template -->
     <script src="{% static 'js/agency.min.js' %}"></script>
+<script>
+    $('#login-button').click(function(){
+  $('#login-button').fadeIn("slow",function(){
+    $("#login-form").fadeIn();
+    
+  });
+});
 
+$(".close-btn").click(function(){
+  
+  $("#login-form, #forgotten-container").fadeOut(800, function(){
+    $("#login-button").fadeIn(800);
+  });
+});
+
+/* Forgotten Password */
+$('#forgotten').click(function(){
+  $("#login-form").fadeOut(function(){
+    $("#forgotten-container").fadeIn();
+  });
+});
+</script>
   </body>
 
 </html>
